@@ -23,7 +23,7 @@ function MessageInput(props) {
   return (
     <>
       <Row className="message-input">
-        <Col xs={5} lg={5}>
+        <Col xs={5} lg={10}>
           <input
             type="text"
             placeholder="Type your message here"
@@ -32,7 +32,7 @@ function MessageInput(props) {
           />
         </Col>
 
-        <Col xs={3} lg={4}>
+        <Col xs={1} lg={2}>
           <div className="send-button ">
             <i
               style={{

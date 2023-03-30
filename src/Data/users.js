@@ -1,3 +1,5 @@
+// dummy data for UI developement...
+
 export const data = {
   profile: {
     id: 1,
