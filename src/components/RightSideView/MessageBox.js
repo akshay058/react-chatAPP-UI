@@ -5,6 +5,8 @@ import RightChatBubble from "./RightChatBubble";
 import MessageInput from "./MessageInput";
 import { addNewMessage } from "../../redux/actions/contact";
 import ProfileHeader from "../LeftSideView/ProfileHeader";
+
+// showing all data in message box........
 function MessageBox(props) {
   const [chat, setChat] = useState([]);
   const [length, setLength] = useState();
@@ -21,7 +23,7 @@ function MessageBox(props) {
       message_id: length + 1,
     };
     dispatch(addNewMessage(object, props.user.id));
-    // updatelength
+    // here are trying to update the length of message as length is increased..
     setLength(object.message_id);
 
     setChat([...chat, object]);

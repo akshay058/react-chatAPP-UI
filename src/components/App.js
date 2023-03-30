@@ -1,40 +1,45 @@
 import React, { useEffect, useState } from "react";
+import { data } from "../Data/users";
+
 import { useSelector, useDispatch } from "react-redux";
-import { Col, Container, Row } from "react-bootstrap";
 
 import { Route, Routes } from "react-router-dom";
 
-import { data } from "../Data/users";
 import { updateContacts } from "../redux/actions/contact";
+import { Col, Container, Row } from "react-bootstrap";
 
 import "./styles/App.css";
 import "./styles/LeftSideView.css";
-import SearchBar from "./LeftSideView/SearchBar";
 import ContactList from "./LeftSideView/ContactList";
-import ConversationList from "./RightSideView/ConversationList";
 import NoConvo from "./RightSideView/NoConvo";
+import SearchBar from "./LeftSideView/SearchBar";
 import NewConversation from "./LeftSideView/NewConversation";
 import NewConversationTab from "./LeftSideView/NewConversationTab";
+import ConversationList from "./RightSideView/ConversationList";
 
 function App() {
-  const [contacts, setContacts] = useState([]);
-  const [searchfield, setSearchField] = useState("");
   const [newConvoTab, showNewConvoTab] = useState(false);
+
+  const [searchfield, setSearchField] = useState("");
+
+  const [contacts, setContacts] = useState([]);
+
   const stateContacts = useSelector((state) => state.contacts);
 
   const dispatch = useDispatch();
-  // fetch contacts from
+  // using use effect to fetch contacts from fefault data
   useEffect(() => {
     // dispatch action to store contacts in state
     dispatch(updateContacts(data.profile.contacts));
     setContacts(stateContacts.contacts);
   }, [dispatch, stateContacts.contacts]);
-  //handle search change
+
+  //Search box handling has been done from this handler..
   const onSearchChange = (event) => {
     setSearchField(event.target.value);
   };
 
-  // filter results
+  // By word wise contacts are filtered by name here
   const filteredContacts = contacts.filter((contact) => {
     //this will return only the contacts whose name is same as searched input
     return contact.name.toLowerCase().includes(searchfield.toLowerCase());
@@ -53,10 +58,6 @@ function App() {
                 }}
               >
                 <SearchBar searchChange={onSearchChange} />
-
-                {/* <Col>
-                  <ProfileHeader user={user} />
-                </Col> */}
               </Row>
               <Row className="d-flex align-items-center">
                 <Col>

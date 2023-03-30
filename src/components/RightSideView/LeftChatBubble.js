@@ -1,5 +1,6 @@
 import React from 'react';
 
+// showing message in left bubble box .........
 function LeftChatBubble({ message, name, image }) {
   return (
     <>

@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 function NoConvo() {
   const user = useSelector((state) => state.user);
 
+  // by default when we open local host this default page will show
+  // default login user show here
   return (
     <>
       <div

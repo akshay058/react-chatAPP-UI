@@ -1,7 +1,10 @@
 import React from "react";
-import { useParams } from "react-router";
 import "../styles/RightSideView.css";
+import { useParams } from "react-router";
 import MessageBox from "./MessageBox";
+
+//here we are finding conversation from the global state
+// rendering data to message box
 function ConversationList(props) {
   const { contacts } = props;
   const { id } = useParams();

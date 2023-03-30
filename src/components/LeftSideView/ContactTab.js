@@ -1,8 +1,8 @@
 import React from "react";
-import ContactsImage from "./ContactsImage";
 import ContactLastMessage from "./ContactLastMessage";
 import ContactName from "./ContactName";
 import { Link } from "react-router-dom";
+import ContactsImage from "./ContactsImage";
 function ContactTab(props) {
   const { image, name, chatlog, id } = props.contact;
 
