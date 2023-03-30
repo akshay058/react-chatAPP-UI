@@ -1,8 +1,9 @@
 import React from "react";
 import ContactTab from "./ContactTab";
+// create contact list on left side bar....
+// mapping Contact tab to render data ....
 
 function ContactList({ contacts }) {
-  // need contact tab component
   return (
     <>
       <div style={styles.contactList} className="contactscreen">

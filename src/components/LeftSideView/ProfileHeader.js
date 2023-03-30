@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 
+// showing profile pic person whom we chatting.........
 function ProfileHeader({ user }) {
   return (
     <>

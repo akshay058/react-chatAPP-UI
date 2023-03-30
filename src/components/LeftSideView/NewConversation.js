@@ -1,5 +1,6 @@
 import React from "react";
 
+// create button of pop up window to show available conversation...
 function NewConversation(props) {
   let handleClick = () => {
     props.showNewConvoTab(true);
@@ -8,6 +9,7 @@ function NewConversation(props) {
     <div className="new-convo">
       <p>CONVERSATIONS</p>
 
+      {/* icon of add .. used to check all contacts for conversation */}
       <span>
         {" "}
         <i

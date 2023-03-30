@@ -1,5 +1,6 @@
 import React from "react";
 
+// here we create search icon to search all available contacts by typing name....
 function SearchBar({ searchChange }) {
   return (
     <>
@@ -12,6 +13,8 @@ function SearchBar({ searchChange }) {
     </>
   );
 }
+
+// separated styles and using in tag for better readablitity....
 const styles = {
   input: {
     borderRadius: "7px",
