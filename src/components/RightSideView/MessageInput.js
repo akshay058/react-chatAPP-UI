@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify"; // import for Toast notification
+import "react-toastify/dist/ReactToastify.css";
+
 import { Row, Col } from "react-bootstrap";
 function MessageInput(props) {
   const { newMessageHandler } = props;
@@ -14,10 +17,17 @@ function MessageInput(props) {
   let handleSubmit = () => {
     if (message) {
       newMessageHandler(message);
+
+      // added toast for notification...........
+      toast.success("Message Sent", {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 1000, // hide toast after 3 seconds
+      });
     } else {
       alert("Please Type Something!");
     }
     setMessage("");
+
     // scroll to the bottom
   };
   return (

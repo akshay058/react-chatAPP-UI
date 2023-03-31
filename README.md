@@ -1,8 +1,29 @@
+# Chat APP UI In React
+
+I have Spent good amount of time on this project. This chat UI uses Redux and Hooks concept to create UI part of Chat,
+Created Actions, reducers, Store for Global state management by Redux. Worked on useSelector, useDispatch , usestate,
+useEffect hooks. Used Routes, Browser Router , Route for displaying chats of multiple contacts, Binded all app data with Routes
+and Provider.
+
+Used Bootstarp, React Bootstrap for styling.
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+  npm start
+```
+
+## How to Approach
+
+Steps:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
@@ -14,57 +35,146 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+Now create Different Components to render it over a same page. As I created 4 components CRUD, Form, Table.
+Now this all components are rendered on App component and app component is rendered at index which show view Live.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `npm run build`
+![App Screenshot](/chatUI1.jpg?raw=true "Optional Title")
+![App Screenshot](/chatUI2.jpg?raw=true "Optional Title")
+![App Screenshot](/chatUI3.jpg?raw=true "Optional Title")
+![App Screenshot](/chatUI4.jpg?raw=true "Optional Title")
+![App Screenshot](/chatUI5.jpg?raw=true "Optional Title")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project is deployed on :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Live view:
 
-### `npm run eject`
+# Video of Explaination
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# To deploy this project run
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm run deploy
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React , Redux , React-Hooks , React Routers , React Bootstarp, Bootstarp, react-toastify , props , useSelector,useDispatch, useState, useEffect hooks, Dummy API data to build this project
 
-## Learn More
+## Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Dummy logged in user.
+- Search bar to search conversations by contact name.
+- Left Side bar having all conversation created list.
+- In Left Side Bar Each conversation has contact name and some text of the last message in the chat
+- Conversation button
+- - On clicking this open a pop up and load all the contacts (from the dummy data.json/js file).
+- - On clicking the contact should start a new conversation (if no conversation was previously started).
+    Or open the existing conversation for that contact.
+- Ride Side View Showing the current selected conversation messages.
+- Send a message in the conversation.
+- Handle errors and success alerts and show appropriate Alert/Notification.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Used only react-router and React hooks.
 
-### Code Splitting
+## Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- |-- Chatting-App
+    |-- .gitignore
+    |-- chatUI1.jpg
+    |-- chatUI2.jpg
+    |-- chatUI3.jpg
+    |-- chatUI4.jpg
+    |-- chatUI5.jpg
+    |-- directoryList.md
+    |-- package-lock.json
+    |-- package.json
+    |-- README.md
+    |-- public
+    |   |-- favicon.ico
+    |   |-- index.html
+    |   |-- logo192.png
+    |   |-- logo512.png
+    |   |-- manifest.json
+    |   |-- robots.txt
+    |-- src
+        |-- index.css
+        |-- index.js
+        |-- logo.svg
+        |-- reportWebVitals.js
+        |-- components
+        |   |-- App.js
+        |   |-- LeftSideView
+        |   |   |-- ContactLastMessage.js
+        |   |   |-- ContactList.js
+        |   |   |-- ContactName.js
+        |   |   |-- ContactsImage.js
+        |   |   |-- ContactTab.js
+        |   |   |-- NewConversation.js
+        |   |   |-- NewConversationTab.js
+        |   |   |-- ProfileHeader.js
+        |   |   |-- SearchBar.js
+        |   |-- RightSideView
+        |   |   |-- ConversationList.js
+        |   |   |-- LeftChatBubble.js
+        |   |   |-- MessageBox.js
+        |   |   |-- MessageInput.js
+        |   |   |-- NoConvo.js
+        |   |   |-- RightChatBubble.js
+        |   |-- styles
+        |       |-- App.css
+        |       |-- LeftSideView.css
+        |       |-- RightSideView.css
+        |-- Data
+        |   |-- users.js
+        |-- redux
+            |-- actions
+            |   |-- actionTypes.js
+            |   |-- contact.js
+            |-- reducers
+            |   |-- contact.js
+            |   |-- index.js
+            |   |-- user.js
+            |-- store
+                |-- index.js
 
-### Analyzing the Bundle Size
+## Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Clone the project
 
-### Making a Progressive Web App
+```bash
+  git clone https://link-to-project
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Go to the project directory
 
-### Advanced Configuration
+```bash
+  cd my-project
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Install dependencies
 
-### Deployment
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Start the server
 
-### `npm run build` fails to minify
+```bash
+  npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+## Author
+
+- [@Akshay](https://www.github.com/akshay058)

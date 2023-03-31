@@ -7,6 +7,9 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { configureStore } from "./redux/store";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const store = configureStore();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,6 +20,8 @@ root.render(
         <App />
       </BrowserRouter>
     </Provider>
+    {/* Wrapping content with toast notification */}
+    <ToastContainer />
   </React.StrictMode>
 );
 
