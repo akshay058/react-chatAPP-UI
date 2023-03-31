@@ -56,6 +56,8 @@ This project is deployed on :
 
 # Live view:
 
+https://akshay-react-chatui.netlify.app/
+
 # To deploy this project run
 
 ```bash
